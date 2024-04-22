@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="charset" content="iso-8859-1">
+
+<title>Si Wei Test Page</title>
+
+<!-- DIDOMI CMP CONFIGURATION -->
+<script type="text/javascript">
+	// initialize CMP
+	if (new URLSearchParams(window.location.search).get('cmp') !== 'blocked') {
+	  window.gdprAppliesGlobally=true;(function(){function n(e){if(!window.frames[e]){ if(document.body&&document.body.firstChild){var t=document.body;var a=document.createElement("iframe"); a.style.display="none";a.name=e;a.title=e;t.insertBefore(a,t.firstChild)}else{setTimeout(function(){n(e)},5)}}} function e(a,r,o,e,i){function t(e,t,a){if(typeof a!=="function"){return}if(!window[r]){window[r]=[]}var n=false; if(i){n=i(e,t,a)}if(!n){window[r].push({command:e,parameter:t,callback:a})}}t.stub=true;function n(n){ if(!window[a]||window[a].stub!==true){return}if(!n.data){return}var r=typeof n.data==="string";var e; try{e=r?JSON.parse(n.data):n.data}catch(t){return}if(e[o]){var i=e[o];window[a](i.command,i.parameter, function(e,t){var a={};a.postMessageReturn={returnValue:e,success:t,callId:i.callId};n.source.postMessage(r?JSON.stringify(a):a,"*")})}} if(typeof window[a]!=="function"){window[a]=t;if(window.addEventListener){window.addEventListener("message",n,false)}else{ window.attachEvent("onmessage",n)}}}e("__uspapi","__uspapiBuffer","__uspapiCall","__uspapiReturn");n("__uspapiLocator") ;(function(){var f=function f(){var n="__tcfapiLocator";var i=[];var r=window;var e;function o(){var e=r.document;var t=!!r.frames[n];if(!t){if(e.body){ var a=e.createElement("iframe");a.style.cssText="display:none";a.name=n;e.body.appendChild(a)}else{setTimeout(o,5)}}return!t}function t(){var e; for(var t=arguments.length,a=new Array(t),n=0;n<t;n++){a[n]=arguments[n]}if(!a.length){return i}else if(a[0]==="setGdprApplies"){ if(a.length>3&&parseInt(a[1],10)===2&&typeof a[3]==="boolean"){e=a[3];if(typeof a[2]==="function"){a[2]("set",true)}}}else if(a[0]==="ping"){ var r={gdprApplies:e,cmpLoaded:false,cmpStatus:"stub"};if(typeof a[2]==="function"){a[2](r)}}else{i.push(a)}}function a(n){var r=typeof n.data==="string";var e={};try{if(r){e=JSON.parse(n.data)} else{e=n.data}}catch(t){}var i=e.__tcfapiCall;if(i){window.__tcfapi(i.command,i.version,function(e,t){var a={__tcfapiReturn:{returnValue:e,success:t,callId:i.callId}}; if(r){a=JSON.stringify(a)}n.source.postMessage(a,"*")},i.parameter)}}while(r){try{if(r.frames[n]){e=r;break}}catch(s){}if(r===window.top){break}r=r.parent}if(!e){o();r.__tcfapi=t; r.addEventListener("message",a,false)}};if(typeof module!=="undefined"){module.exports=f}else{f()}})();(function(e){var t=document.createElement("script");t.id="spcloader";t.type="text/javascript"; t.async=true;t.src="https://sdk.privacy-center.org/loader.js";t.charset="utf-8";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(t,a)})()})();
+	  window.didomiConfig = {
+		website: {
+			apiKey:"03f1af55-a479-4c1f-891a-7481345171ce",
+			name:'Didomi',
+			vendors:{ iab:{version: 2,all: true}, didomi: ['google'] }
+		},
+		notice: {
+		  position: 'bottom', showDataProcessing: true
+		}
+	  };
+	}
+</script>
+<!-- DIDOMI CMP CONFIGURATION END -->
+<!--Basic Page Style-->
+<link rel="shortcut icon" href="https://demo.smartadserver.com/shared/Smart/GSDP/resources/img/venus/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://demo.smartadserver.com/shared/Smart/GSDP/resources/img/venus/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://demo.smartadserver.com/shared/Smart/GSDP/resources/css/eq-style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!--BASIC GOOGLE REFERENCE-->
+<!--This configuration is needed by Google Tags-->
+<!-- /!\ ATTENTION: the client's prebid.js URL should be added -->
+<script type="application/javascript" src="https://ced.sascdn.com/tag/106/smart.js" async></script>
+<script type="application/javascript">
+    var sas = sas || {};
+    sas.cmd = sas.cmd || [];
+    sas.cmd.push(function() {
+        sas.setup({ networkid: 106, domain: "https://adapi.smartadserver.com", async: true });
+    });
+    sas.cmd.push(function() {
+        sas.call("onecall", {
+            siteId: 581717,
+            pageId: 1781260,
+            formats: [
+                { id: 118406 }
+            ],
+            target: 'equativtestpage=groupe6tm'
+        });
+    });
+</script>
+</head>
+
+<body>
+
+<div id="pregeneral">
+<div id="general">
+
+
+<div id="content_container">
+
+<div id="header">
+	<div id="headertitle" class="ad">
+		<span id="title"><span class="eq">Equativ</span> Test Page</span><br>
+		<span>Page used to make test interactions</span>
+	</div>
+	<div id="logo">&nbsp;</div>
+</div>
+<br>
+<div id="slider">
+</div>
+<div id="columns">
+		<div id="articleContent">
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc9"></div><br>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div id="ad-content-mega"></div>
+<div id="sas_118406"></div>
+<script type="application/javascript">
+    sas.cmd.push(function() {
+        sas.render("118406");  // Format : pavé2 300x250 300x250
+    });
+</script>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div><br>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>	
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>		
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>	
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div><br>
+			<div class="bloc9"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc9"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc9"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+		</div>
+		<div id="right-column">
+			<div class="bloc4"></div>
+			<div class="bloc4"></div>
+			<div class="bloc4"></div>
+			<div class="bloc6"></div><br>
+			<div class="bloc4"></div>
+			<div class="bloc4"></div>
+			<div class="bloc5"></div>
+			<div class="bloc4"></div><br>
+			<div class="bloc7"></div>
+			<div class="bloc4"></div>
+			<div class="bloc4"></div>
+			<div class="bloc4"></div>
+			<div class="bloc4"></div><br>
+			<div class="bloc5"></div>
+			<div class="bloc4"></div>
+			<div id="ad-content-banner">
+			</div>
+			<div class="bloc4"></div>
+			<div class="bloc4"></div><br>
+			<div id="col1_bloc3"></div>
+			<div class="bloc4"></div>
+			<div class="bloc4"></div>
+			<div class="bloc4"></div>
+			<div class="bloc6"></div><br>
+			<div class="bloc4"></div>
+			<div class="bloc4"></div>
+			<div class="bloc5"></div>
+			<div class="bloc4"></div><br>
+			<div class="bloc7"></div>
+			<div class="bloc4"></div>
+		</div>
+
+		<div style="clear: both;"></div>
+<div>
+<br><br>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+	<a href="https://equativ.com/" target="_blank"><img src="https://demo.smartadserver.com/shared/Smart/GSDP/resources/img/SVN_Equativ_Logo_RGB-1copy.png" alt="Equativ logo"></a>
+	<!--<a href="https://www.flaticon.com/free-icons/planet" title="planet icons">Planet icons created by Freepik - Flaticon</a>-->
+</div>
+
+</body> 
+</html>
