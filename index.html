@@ -32,21 +32,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 <!-- /!\ ATTENTION: the client's prebid.js URL should be added -->
 <!-- EQUATIV CONFIGURATION -->
-<script type="application/javascript" src="https://ced.sascdn.com/tag/106/smart.js" async></script>
+<script type="application/javascript" src="https://ced.sascdn.com/tag/4076/smart.js" async></script>
 <script type="application/javascript">
     var sas = sas || {};
     sas.cmd = sas.cmd || [];
     sas.cmd.push(function() {
-        sas.setup({ networkid: 106, domain: "https://adapi.smartadserver.com", async: true });
+        sas.setup({ networkid: 4076, domain: "https://www11.smartadserver.com", async: true });
     });
     sas.cmd.push(function() {
         sas.call("onecall", {
-            siteId: 581717,
-            pageId: 1781260,
+            siteId: 650090,
+            pageId: 1963766,
             formats: [
-                { id: 118406 }
+                 { id: 108263 }
+                ,{ id: 108260 }
+                ,{ id: 108261 }
+                ,{ id: 108262 }
+                ,{ id: 112698 }
+                ,{ id: 112699 }
+                ,{ id: 108259 }
             ],
-            target: 'equativtestpage=groupe6tm'
+            target: ''
         });
     });
 </script>
@@ -85,6 +91,12 @@
 <div id="columns">
 		<div id="articleContent">
 			<div class="bloc8"></div>
+			<div id="sas_108259"></div>
+<script type="application/javascript">
+    sas.cmd.push(function() {
+        sas.render("108259");  // Format : TOP 0x0
+    });
+</script>
 			<div class="bloc8"></div>
 			<div class="bloc8"></div>
 			<div class="bloc9"></div><br>
@@ -147,6 +159,11 @@
 			<div class="bloc9"></div>
 			<div class="bloc8"></div>
 			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
+			<div class="bloc8"></div>
 		</div>
 		<div id="right-column">
 			<div class="bloc4"></div>
@@ -154,14 +171,21 @@
 			<div class="bloc4"></div>
 			<div class="bloc6"></div>
 			<div id="sas_118406"></div>
+<div id="sas_108260"></div>
 <script type="application/javascript">
     sas.cmd.push(function() {
-        sas.render("118406");  // Format : pavé2 300x250 300x250
+        sas.render("108260");  // Format : MIDDLE 0x0
     });
 </script>
 			<br>
 			<div class="bloc4"></div>
 			<div class="bloc4"></div>
+			<div id="sas_108261"></div>
+<script type="application/javascript">
+    sas.cmd.push(function() {
+        sas.render("108261");  // Format : MIDDLE 2 0x0
+    });
+</script>
 			<div class="bloc5"></div>
 			<div class="bloc4"></div><br>
 			<div class="bloc7"></div>
