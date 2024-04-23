@@ -15,7 +15,7 @@ tv.freewheel.DemoPlayer = function() {
 
 	// Step #1: Obtain content metadata
 	var theNetworkId = 42015;
-	var theServerURL = "https://demo.v.fwmrm.net/ad/g/1";
+	var theServerURL = "https://7cd77.v.fwmrm.net/ad/g/1";
 	var theProfileId = "511351:ftv_html5"
 	var theVideoAssetId = "france24_test";
 	var theSiteSectionId  = "france24frtest";
