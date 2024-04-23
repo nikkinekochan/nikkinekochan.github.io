@@ -16,9 +16,9 @@ tv.freewheel.DemoPlayer = function() {
 	// Step #1: Obtain content metadata
 	var theNetworkId = 42015;
 	var theServerURL = "https://demo.v.fwmrm.net/ad/g/1";
-	var theProfileId = "42015:js_allinone_profile"
-	var theVideoAssetId = "js_allinone_demo_video";
-	var theSiteSectionId  = "js_allinone_demo_site_section";
+	var theProfileId = "511351:ftv_html5"
+	var theVideoAssetId = "france24_test";
+	var theSiteSectionId  = "france24frtest";
 	var theVideoDuration = 500;
 
 	// Step #2: Initialize AdManager
