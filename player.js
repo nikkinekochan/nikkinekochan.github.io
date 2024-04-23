@@ -15,7 +15,7 @@ tv.freewheel.DemoPlayer = function() {
 
 	// Step #1: Obtain content metadata
 	var theNetworkId = 42015;
-	var theServerURL = "http://demo.v.fwmrm.net/ad/g/1";
+	var theServerURL = "https://demo.v.fwmrm.net/ad/g/1";
 	var theProfileId = "42015:js_allinone_profile"
 	var theVideoAssetId = "js_allinone_demo_video";
 	var theSiteSectionId  = "js_allinone_demo_site_section";
