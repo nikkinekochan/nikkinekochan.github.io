@@ -50,7 +50,7 @@ function initializeIMA() {
   });
 
   var adsRequest = new google.ima.AdsRequest();
-  adsRequest.adTagUrl = 'https://7cd77.v.fwmrm.net/ad/g/1?nw=511351&prof=511351:ftv_ebu_web&csid=ebuweb&caid=ebu_videos&sfid=17040999&afid=339800939&resp=vmap1&vdur=60&flag=+exvt+sltp+slcb&metr=1023;_fw_gdpr=1&_fw_gdpr_consent=CP9kdnAP9kdnAAcABBENAxEsAP_gAEPgAChQKENV_H__bW9r8Xr3aft0eY1P99j77sQxBhfJE-4FzLvW_JwXx2ExNA36tqIKmRIEu3bBIQFlHJDUTVigaogVryDMakWcgTNKJ6BkiFMRO2dYCF5vmQtj-QKY5vp9d3dx2Det_dv83dzyz4VHn3a5_2e0WJCdA58tDfv9bROb-9IPd_58v4v0_F_rE2_eT1l_tevp7B8uct87_XU-9_fff79AFBQgAsw0KiAPsiQkINAwigQAqCsICKBAAAACQNEBACYMCnYGAS6wkQAgBQADBACAAFGQAIAABIAEIgAkAKBAABAIFAACAAAIBAAwMAAYALAQCAAEB0CFMCCBQLABIzIiFMCAKBIICWyoQSAIEFcIQizwIIBETBQAAAkAFYAAgLBYDEkgJWJBAlxBtAAAQAIBBCBUIpOjAEECZstVOKJtGVpAWB4AAAAA.f_wACHwAAAAA';
+  adsRequest.adTagUrl = 'https://7cd77.v.fwmrm.net/ad/g/1?nw=511351&prof=511351:ftv_ebu_web&csid=ebuweb&caid=ebu_videos&sfid=17040999&afid=339800939&resp=vmap1&vdur=60&flag=+exvt+sltp+slcb&metr=1023;_fw_gdpr=1&_fw_gdpr_consent=${GDPR_CONSENT_285}';
 
   // Specify the linear and nonlinear slot sizes. This helps the SDK to
   // select the correct creative if multiple are returned.
