@@ -50,7 +50,7 @@ function initializeIMA() {
   });
 
   var adsRequest = new google.ima.AdsRequest();
-  adsRequest.adTagUrl = 'https://pubads.g.doubleclick.net/gampad/ads?iu=/21643048729/TESTVIDEO_SIWEI&description_url=[placeholder]&tfcd=0&npa=0&sz=624x352%7C640x480&gdfp_req=1&unviewed_position_start=1&output=vast&env=vp&impl=s&correlator=';
+  adsRequest.adTagUrl = 'https://7cd77.v.fwmrm.net/ad/g/1?nw=511351&prof=511351:ftv_ebu_web&csid=ebuweb&caid=ebu_videos&sfid=17040999&afid=339800939&resp=vast4&vdur=60&flag=+exvt+sltp+slcb&metr=1023&gdpr=${GDPR}&gdpr_consent=${GDPR_CONSENT_755}&ord=%%CACHEBUSTER%%';
 
   // Specify the linear and nonlinear slot sizes. This helps the SDK to
   // select the correct creative if multiple are returned.
