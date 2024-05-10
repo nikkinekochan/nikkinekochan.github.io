@@ -50,7 +50,7 @@ function initializeIMA() {
   });
 
   var adsRequest = new google.ima.AdsRequest();
-  adsRequest.adTagUrl = 'https://7cd77.v.fwmrm.net/ad/g/1?nw=511351&prof=511351:ftv_ebu_web&csid=ebuweb&caid=ebu_videos&sfid=17040999&afid=339800939&resp=vast4&vdur=60&flag=+exvt+sltp+slcb&metr=1023&gdpr=${GDPR}&gdpr_consent=${GDPR_CONSENT_755}&ord=%%CACHEBUSTER%%';
+  adsRequest.adTagUrl = 'https://7cd77.v.fwmrm.net/ad/g/1?nw=511351&prof=511351:ftv_ebu_web&csid=ebuweb&caid=ebu_videos&sfid=17040999&afid=339800939&resp=vast4&vdur=60&flag=+exvt+sltp+slcb&metr=1023&ord=%%CACHEBUSTER%%';
 
   // Specify the linear and nonlinear slot sizes. This helps the SDK to
   // select the correct creative if multiple are returned.
