@@ -29,12 +29,6 @@ window.addEventListener('resize', function(event) {
   }
 });
 
-google.ima.settings.setVpaidMode(google.ima.ImaSdkSettings.VpaidMode.ENABLED);
-      ...
-      var adDisplayContainer = new google.ima.AdDisplayContainer(adContainerElement);
-      var adsLoader = new google.ima.AdsLoader(adDisplayContainer);
-      ...
-
 function initializeIMA() {
   console.log("initializing IMA");
   adContainer = document.getElementById('ad-container');
