@@ -14,11 +14,11 @@ tv.freewheel.DemoPlayer = function() {
 	this.onSlotEnded = this.onSlotEnded.bind(this);
 
 	// Step #1: Obtain content metadata
-	var theNetworkId = 42015;
-	var theServerURL = "http://demo.v.fwmrm.net/ad/g/1";
-	var theProfileId = "42015:js_allinone_profile"
-	var theVideoAssetId = "js_allinone_demo_video";
-	var theSiteSectionId  = "js_allinone_demo_site_section";
+	var theNetworkId = 511351;
+	var theServerURL = "https://7cd77.v.fwmrm.net/ad/g/1";
+	var theProfileId = "511351:ftv_html5"
+	var theVideoAssetId = "c8c1c704-4fe4-4418-9ef5-71b48e07f118";
+	var theSiteSectionId  = "www.france.tv";
 	var theVideoDuration = 500;
 
 	// Step #2: Initialize AdManager
