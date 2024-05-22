@@ -16,9 +16,9 @@ tv.freewheel.DemoPlayer = function() {
 	// Step #1: Obtain content metadata
 	var theNetworkId = 511351;
 	var theServerURL = "https://7cd77.v.fwmrm.net/ad/g/1";
-	var theProfileId = "511351:ftv_html5"
-	var theVideoAssetId = "c8c1c704-4fe4-4418-9ef5-71b48e07f118";
-	var theSiteSectionId  = "www.france.tv";
+	var theProfileId = "511351:ftv_brut_sdk_web"
+	var theVideoAssetId = "www.brut.fr/entertainment";
+	var theSiteSectionId  = "www.brut.fr";
 	var theVideoDuration = 500;
 
 	// Step #2: Initialize AdManager
