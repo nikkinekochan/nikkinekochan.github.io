@@ -1,0 +1,134 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>FreeWheel HTML5 Demo Player</title>
+    <link rel='icon' type='image/png' href='https://freewheel.com/favicon.ico'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
+        integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous' />
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'
+        integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM'
+        crossorigin='anonymous'></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css"/>
+    <script type="text/javascript" src="https://mssl.fwmrm.net/libs/adm/7.0.0/AdManager.js"></script>
+    <script type="text/javascript" src="player.js"></script>
+    <style type="text/css">
+        #standaloneContainer {
+            margin-top: 20px;
+        }
+        #videoPlayer {
+            height: 480px;
+            width: 100%;
+            background-color: #000;
+        }
+        .navbar a{
+            margin: 5px;
+        }
+        footer{
+            padding: 10px;
+            text-align: right;
+        }
+        footer, footer a{
+            font-size: small;
+            color: #ccc;
+        }
+        #brandImg {
+            margin-left: auto;
+            display: inline-block;
+        }
+        #brandText {
+            color: #40748c;
+            font-size: x-large;
+            font-weight: 300;
+            margin-left: 10px;
+            margin-right: auto;
+            display: inline-block;
+        }
+        #displayBase {
+            position: relative;
+        }
+    </style>
+  </head>
+  <body>
+    <div class='navbar navbar-static-top' id='playerTitle'>
+        <img alt='Brand' src='https://vi.freewheel.tv/static/images/ee_logo.png' id='brandImg' />
+        <span id='brandText'>FreeWheel HTML5 Demo Player</span>
+    </div>
+    <div style="margin: 20px">
+        <div class="row">
+            <div class="col-lg-6" id="leftPanel">
+                <div id="displayBase">
+                    <video id="videoPlayer" webkit-playsinline playsinline>
+                        <source src="https://s1.fwmrm.net/t/1/96749/62/36685630/192354742/freewheel_1650311431.mp4"/>
+                    </video>
+                </div>
+                <div>
+                    <button id="start" class="btn btn-info" style="width: 100%;" disabled>Play</button>
+                </div>
+                <div id="standaloneContainer">
+                    <p>Standalone 728x90</p>
+                    <span id="standaloneSlot" class="_fwph" >
+                        <form id="_fw_form_standaloneSlot" style="display:none">
+                            <input type="hidden" name="_fw_input_standaloneSlot" id="_fw_input_standaloneSlot" value="ptgt=p&amp;h=90&amp;w=728&amp;flag=+cmpn+fcai">
+                        </form>
+                        <span id="_fw_container_standaloneSlot"></span>
+                    </span>
+                </div>
+            </div> <!-- col-lg-6 -->
+            <div class="col-lg-6">
+                <div id="companionContainer">
+                    <p>Companion 300x250</p>
+                    <span id="companionSlot" class="_fwph" >
+                        <form id="_fw_form_companionSlot" style="display:none">
+                            <input type="hidden" name="_fw_input_companionSlot" id="_fw_input_companionSlot" value="ptgt=p&amp;h=250&amp;w=300">
+                        </form>
+                        <span id="_fw_container_companionSlot"><!-- COMPANION_SLOT_1 --></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer> 
+        <span id="copyright">
+            &copy;
+            <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+        </span>
+        <a href="https://freewheel.com" target="_blank">FreeWheel Media Inc.</a>
+    </footer>
+    <script type="text/javascript">
+    $(function() {
+        var player = new tv.freewheel.DemoPlayer();
+        player.requestAds();
+		var $playButton = $('#start');
+		var playButtonStatus = {
+			currentState: 'init',
+			init: function() {
+				$playButton.bind('click', this.statusTranslate.bind(this));
+			},
+			statusTranslate: function() {
+				switch (this.currentState) {
+					case "paused":
+						this.currentState = 'playing';
+						player.resume();
+						$playButton.text('Pause');
+						break;
+					case "playing":
+						this.currentState = 'paused';
+						player.pause();
+						$playButton.text('Resume');
+						break;
+					case "init":
+						this.currentState = 'playing';
+						player.playPreroll();
+						$playButton.text('Pause');
+						break;
+				}
+			}
+		}
+		playButtonStatus.init();
+    });
+    </script>
+  </body>
+</html>
