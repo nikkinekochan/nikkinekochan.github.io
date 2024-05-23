@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>FreeWheel HTML5 Demo Player</title>
+<a href="https://www.francetvpub.fr/" target="_blank"><img src="ftp.png" alt="France Télévision Publicité logo"></a>
     <link rel='icon' type='image/png' href='https://freewheel.com/favicon.ico'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <nav id="navbar">
@@ -20,6 +21,24 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css"/>
     <script type="text/javascript" src="https://mssl.fwmrm.net/libs/adm/7.0.0/AdManager.js"></script>
     <script type="text/javascript" src="player.js"></script>
+<!-- DIDOMI CMP CONFIGURATION -->
+<script type="text/javascript">
+	// initialize CMP
+	if (new URLSearchParams(window.location.search).get('cmp') !== 'blocked') {
+	  window.gdprAppliesGlobally=true;(function(){function n(e){if(!window.frames[e]){ if(document.body&&document.body.firstChild){var t=document.body;var a=document.createElement("iframe"); a.style.display="none";a.name=e;a.title=e;t.insertBefore(a,t.firstChild)}else{setTimeout(function(){n(e)},5)}}} function e(a,r,o,e,i){function t(e,t,a){if(typeof a!=="function"){return}if(!window[r]){window[r]=[]}var n=false; if(i){n=i(e,t,a)}if(!n){window[r].push({command:e,parameter:t,callback:a})}}t.stub=true;function n(n){ if(!window[a]||window[a].stub!==true){return}if(!n.data){return}var r=typeof n.data==="string";var e; try{e=r?JSON.parse(n.data):n.data}catch(t){return}if(e[o]){var i=e[o];window[a](i.command,i.parameter, function(e,t){var a={};a.postMessageReturn={returnValue:e,success:t,callId:i.callId};n.source.postMessage(r?JSON.stringify(a):a,"*")})}} if(typeof window[a]!=="function"){window[a]=t;if(window.addEventListener){window.addEventListener("message",n,false)}else{ window.attachEvent("onmessage",n)}}}e("__uspapi","__uspapiBuffer","__uspapiCall","__uspapiReturn");n("__uspapiLocator") ;(function(){var f=function f(){var n="__tcfapiLocator";var i=[];var r=window;var e;function o(){var e=r.document;var t=!!r.frames[n];if(!t){if(e.body){ var a=e.createElement("iframe");a.style.cssText="display:none";a.name=n;e.body.appendChild(a)}else{setTimeout(o,5)}}return!t}function t(){var e; for(var t=arguments.length,a=new Array(t),n=0;n<t;n++){a[n]=arguments[n]}if(!a.length){return i}else if(a[0]==="setGdprApplies"){ if(a.length>3&&parseInt(a[1],10)===2&&typeof a[3]==="boolean"){e=a[3];if(typeof a[2]==="function"){a[2]("set",true)}}}else if(a[0]==="ping"){ var r={gdprApplies:e,cmpLoaded:false,cmpStatus:"stub"};if(typeof a[2]==="function"){a[2](r)}}else{i.push(a)}}function a(n){var r=typeof n.data==="string";var e={};try{if(r){e=JSON.parse(n.data)} else{e=n.data}}catch(t){}var i=e.__tcfapiCall;if(i){window.__tcfapi(i.command,i.version,function(e,t){var a={__tcfapiReturn:{returnValue:e,success:t,callId:i.callId}}; if(r){a=JSON.stringify(a)}n.source.postMessage(a,"*")},i.parameter)}}while(r){try{if(r.frames[n]){e=r;break}}catch(s){}if(r===window.top){break}r=r.parent}if(!e){o();r.__tcfapi=t; r.addEventListener("message",a,false)}};if(typeof module!=="undefined"){module.exports=f}else{f()}})();(function(e){var t=document.createElement("script");t.id="spcloader";t.type="text/javascript"; t.async=true;t.src="https://sdk.privacy-center.org/loader.js";t.charset="utf-8";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(t,a)})()})();
+	  window.didomiConfig = {
+		website: {
+			apiKey:"03f1af55-a479-4c1f-891a-7481345171ce",
+			name:'Didomi',
+			vendors:{ iab:{version: 2,all: true}, didomi: ['google'] }
+		},
+		notice: {
+		  position: 'bottom', showDataProcessing: true
+		}
+	  };
+	}
+</script>
+<!-- DIDOMI CMP CONFIGURATION END -->
     <style type="text/css">
         #standaloneContainer {
             margin-top: 20px;
