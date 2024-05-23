@@ -69,6 +69,8 @@ tv.freewheel.DemoPlayer.prototype = {
 
 		// Step #4: Add custom target key
 		this.currentAdContext.addKeyValue("skippable", "enabled");
+		this.currentAdContext.addKeyValue("_fw_gdpr", "1"); 
+		this.currentAdContext.addKeyValue("_fw_gdpr_consent", "CPIk51KPIk51KADAAA");
 
 		// Listen to AdManager Events
 		this.currentAdContext.addEventListener(tv.freewheel.SDK.EVENT_CONTENT_VIDEO_PAUSE_REQUEST, this.onContentPauseRequest);
@@ -77,6 +79,7 @@ tv.freewheel.DemoPlayer.prototype = {
 		this.currentAdContext.addEventListener(tv.freewheel.SDK.EVENT_SLOT_ENDED, this.onSlotEnded);
 
 		this.currentAdContext.setParameter('extension.skippableAd.enabled', true, window.tv.freewheel.SDK.PARAMETER_LEVEL_GLOBAL);
+		this.currentAdContext.setParameter(tv.freewheel.SDK.PARAMETER_USE_GDPR_TCFAPI, false, tv.freewheel.SDK.PARAMETER_LEVEL_GLOBAL);
 
 		// Submit ad request
 		this.currentAdContext.submitRequest();
