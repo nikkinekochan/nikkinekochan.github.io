@@ -18,7 +18,6 @@ tv.freewheel.DemoPlayer = function() {
 	var theServerURL = "https://7cd77.v.fwmrm.net/ad/g/1";
 	var theProfileId = "511351:ftv_brut_sdk_web"
 	var theVideoAssetId = "www.brut.fr/test";
-	var theVideoFallbackId  = "190455434";
 	var theSiteSectionId  = "brut_testsite";
 	var theVideoDuration = 500;
 
@@ -43,7 +42,7 @@ tv.freewheel.DemoPlayer = function() {
 	// Creating ad context
 	this.currentAdContext = this.adManager.newContext();
 	this.currentAdContext.setProfile(theProfileId);
-	this.currentAdContext.setVideoAsset(theVideoAssetId, theVideoDuration, theVideoFallbackId);
+	this.currentAdContext.setVideoAsset(theVideoAssetId, theVideoDuration);
 	this.currentAdContext.setSiteSection(theSiteSectionId);
 };
 
