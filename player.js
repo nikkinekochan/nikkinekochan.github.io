@@ -17,8 +17,8 @@ tv.freewheel.DemoPlayer = function() {
 	var theNetworkId = 511351;
 	var theServerURL = "https://7cd77.v.fwmrm.net/ad/g/1";
 	var theProfileId = "511351:ftv_brut_sdk_web"
-	var theVideoAssetId = "www.brut.fr/test";
-	var theSiteSectionId  = "brut_testsite";
+	var theVideoAssetId = "www.brut.fr/nature";
+	var theSiteSectionId  = "www.brut.fr";
 	var theVideoDuration = 500;
 
 	// Step #2: Initialize AdManager
