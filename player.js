@@ -43,9 +43,24 @@ tv.freewheel.DemoPlayer = function() {
 	// Creating ad context
 	this.currentAdContext = this.adManager.newContext();
 	this.currentAdContext.setProfile(theProfileId);
-	this.currentAdContext.setVideoAsset(theVideoAssetId, theVideoDuration);
-	this.currentAdContext.setVideoAsset(theFallbackId);
-	this.currentAdContext.setSiteSection(theSiteSectionId);
+	this.currentAdContext.setVideoAsset( 
+    		this.options.videoAssetId, // id {String|Number}  The id of the video asset which correspond to the ad request.
+   		this.options.videoDuration, // duration {Number}  The total duration of the video asset in seconds.
+   		this.options.networkId, // networkId {Number} Optional. The network id of the video asset.
+    		"", // location {String} Optional.  The location of the video asset
+    		this.fwSDK.VIDEO_ASSET_AUTO_PLAY_TYPE_ATTENDED, // autoPlayType {Number} Optional, default is VIDEO_ASSET_AUTO_PLAY_TYPE_ATTENDED
+    		Math.floor(100000000 + Math.random() * 900000000), // videoViewRandom	 Number} Optional.  The view random number of the Video Asset. Helps with FW forecasting
+    		this.fwSDK.ID_TYPE_CUSTOM, // idType Optional, default is ID_TYPE_CUSTOM
+    		this.options.fallBackId, // fallbackId {Number} Optional.  The fallback id of the video asset. A fallback ID in FW hierarchy helps correct ads deliver if videoAssetId is unknown
+    		this.options.isStream ? this.fwSDK.VIDEO_ASSET_DURATION_TYPE_VARIABLE : this.fwSDK.VIDEO_ASSET_DURATION_TYPE_EXACT, //durationType Optional, default is VIDEO_ASSET_DURATION_TYPE_EXACT
+  	);
+	this.currentAdContext.setSiteSection(
+    		this.options.siteSectionId, // {String|Number} The id of the site section which correspond to the ad request.
+    		this.options.networkId, // {Number} Optional. The networkId of the site section. Best to explicitly set it
+    		Math.floor(100000000 + Math.random() * 900000000), // {Number} Optional. The view random number of the page (vprn) helps FW forecasting
+    		undefined, // Optional, default is ID_TYPE_CUSTOM . Must be one of: - ID_TYPE_FW - ID_TYPE_CUSTOM - ID_TYPE_GROUP
+    		undefined // {Number} The fallback id of the site section.
+  	); 
 };
 
 tv.freewheel.DemoPlayer.prototype = {
