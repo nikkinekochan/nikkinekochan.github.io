@@ -46,9 +46,6 @@ tv.freewheel.DemoPlayer = function() {
 	this.currentAdContext.setSiteSection(theSiteSectionId);
 };
 
-tv.freewheel.SDK.Context.prototype.setVideoAsset = function(id, duration, networkId, location, autoPlayType, videoViewRandom, idType, fallbackId, durationType) {};
-tv.freewheel.SDK.Context.prototype.setSiteSection = function(id, networkId, pageViewRandom, idType, fallbackId) {};
-
 tv.freewheel.DemoPlayer.prototype = {
 	requestAds: function() {
 		// Step #3: Configure ad request
