@@ -18,9 +18,8 @@ tv.freewheel.DemoPlayer = function() {
 	var theServerURL = "https://7cd77.v.fwmrm.net/ad/g/1";
 	var theProfileId = "511351:ftv_brut_sdk_web"
 	var theVideoAssetId = "www.brut.fr/test";
-	var theVideoAssetFallbackId  = "190455434";
+	var theVideoFallbackId  = "190455434";
 	var theSiteSectionId  = "brut_testsite";
-	var theSiteSectionFallbackId  = "9078403";
 	var theVideoDuration = 500;
 
 	// Step #2: Initialize AdManager
