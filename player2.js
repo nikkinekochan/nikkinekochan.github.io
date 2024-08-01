@@ -18,7 +18,9 @@ tv.freewheel.DemoPlayer = function() {
 	var theServerURL = "https://7cd77.v.fwmrm.net/ad/g/1";
 	var theProfileId = "511351:ftv_html5"
 	var theVideoAssetId = "3b8fa4c5-d57c-460d-82ba-b158d334f22e";
+	var theVideoAssetFallbackId  = "190455434";
 	var theSiteSectionId  = "www.france.tv";
+	var theSiteSectionFallbackId  = "9078403";
 	var theVideoDuration = 50000;
 
 	// Step #2: Initialize AdManager
@@ -42,8 +44,8 @@ tv.freewheel.DemoPlayer = function() {
 	// Creating ad context
 	this.currentAdContext = this.adManager.newContext();
 	this.currentAdContext.setProfile(theProfileId);
-	this.currentAdContext.setVideoAsset(theVideoAssetId, theVideoDuration);
-	this.currentAdContext.setSiteSection(theSiteSectionId);
+	this.currentAdContext.setVideoAsset(theVideoAssetId, theVideoDuration, theVideoAssetFallbackId);
+	this.currentAdContext.setSiteSection(theSiteSectionId, theSiteSectionFallbackId);
 
 };
 
