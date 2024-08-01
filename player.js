@@ -42,47 +42,12 @@ tv.freewheel.DemoPlayer = function() {
 	// Creating ad context
 	this.currentAdContext = this.adManager.newContext();
 	this.currentAdContext.setProfile(theProfileId);
-/**
- * Method: setVideoAsset
- * 		Set the video asset info for the ad request.
- *
- * @param {String/Number} id The id of the video asset which correspond to the ad request.
- * @param {Number} duration The total duration of the video asset in seconds.
- * @param {Number} networkId Optional. The network id of the video asset.
- * @param {String} location Optional. The location of the video asset
- * @param {Number} autoPlayType Optional, default is VIDEO_ASSET_AUTO_PLAY_TYPE_ATTENDED. Whether the video will be played without user interactive, must be one of:
- * - <VIDEO_ASSET_AUTO_PLAY_TYPE_NONE>
- * - <VIDEO_ASSET_AUTO_PLAY_TYPE_ATTENDED>
- * - <VIDEO_ASSET_AUTO_PLAY_TYPE_UNATTENDED>
- * - <VIDEO_ASSET_AUTO_PLAY_TYPE_CLICK_TO_PLAY>
- *  @param {Number} videoViewRandom Optional. The view random number of the Video Asset.
- *  @param {String} idType - Optional, default is ID_TYPE_CUSTOM. Must be one of:
- * - <ID_TYPE_FW>
- * - <ID_TYPE_CUSTOM>
- * - <ID_TYPE_GROUP>
- * @param {Number} fallbackId Optional. The fallback id of the video asset.
- * @param {String} durationType - Optional, default is VIDEO_ASSET_DURATION_TYPE_EXACT . Must be one of:
- * - <VIDEO_ASSET_DURATION_TYPE_EXACT>
- * - <VIDEO_ASSET_DURATION_TYPE_VARIABLE>
- */
-tv.freewheel.SDK.Context.prototype.setVideoAsset = function(id, duration, networkId, location, autoPlayType, videoViewRandom, idType, fallbackId, durationType) {};
-/**
- * Method: setSiteSection
- * 		Set the site section info for the ad request.
- *
- * @param {String/Number} id - {String|Number} The id of the site section which correspond to the ad request.
- * @param {Number} networkId Optional. The networkId of the site section.
- * @param {Number} pageViewRandom Optional. The view random number of the page.
- * @param {String} idType - Optional, default is ID_TYPE_CUSTOM . Must be one of:
- * - <ID_TYPE_FW>
- * - <ID_TYPE_CUSTOM>
- * - <ID_TYPE_GROUP>
- * @param {Number} fallbackId The fallback id of the site section.
- */
-tv.freewheel.SDK.Context.prototype.setSiteSection = function(id, networkId, pageViewRandom, idType, fallbackId) {};
 	this.currentAdContext.setVideoAsset(theVideoAssetId, theVideoDuration);
 	this.currentAdContext.setSiteSection(theSiteSectionId);
 };
+
+tv.freewheel.SDK.Context.prototype.setVideoAsset = function(id, duration, networkId, location, autoPlayType, videoViewRandom, idType, fallbackId, durationType) {};
+tv.freewheel.SDK.Context.prototype.setSiteSection = function(id, networkId, pageViewRandom, idType, fallbackId) {};
 
 tv.freewheel.DemoPlayer.prototype = {
 	requestAds: function() {
