@@ -43,8 +43,8 @@ tv.freewheel.DemoPlayer = function() {
 	// Creating ad context
 	this.currentAdContext = this.adManager.newContext();
 	this.currentAdContext.setProfile(theProfileId);
-	this.currentAdContext.setVideoAsset(theVideoAssetId, theVideoDuration, theVideoAssetFallbackId);
-	this.currentAdContext.setSiteSection(theSiteSectionId, theSiteSectionFallbackId);
+	this.currentAdContext.setVideoAsset(theVideoAssetId, theVideoDuration, theVideoFallbackId);
+	this.currentAdContext.setSiteSection(theSiteSectionId);
 
 };
 
