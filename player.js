@@ -20,6 +20,8 @@ tv.freewheel.DemoPlayer = function() {
 	var theVideoAssetId = "www.brut.fr/nature";
 	var theSiteSectionId  = "www.brut.fr";
 	var theVideoDuration = 500;
+	var theVideoAssetFallbackId = 190455434;
+	var theSiteSectionFallbackId = 9078403;
 
 	// Step #2: Initialize AdManager
 	// Only one AdManager instance is needed for each player
@@ -42,8 +44,8 @@ tv.freewheel.DemoPlayer = function() {
 	// Creating ad context
 	this.currentAdContext = this.adManager.newContext();
 	this.currentAdContext.setProfile(theProfileId);
-	this.currentAdContext.setVideoAsset(theVideoAssetId, theVideoDuration, fallbackId);
-	this.currentAdContext.setSiteSection(theSiteSectionId, fallbackId);
+	this.currentAdContext.setVideoAsset(theVideoAssetId, theVideoDuration, theVideoAssetFallbackId);
+	this.currentAdContext.setSiteSection(theSiteSectionId, theSiteSectionFallbackId);
 
 };
 
