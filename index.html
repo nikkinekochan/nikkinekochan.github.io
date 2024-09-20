@@ -63,68 +63,6 @@
     });
 </script>
 <!-- EQUATIV CONFIGURATION END-->
-<!-- GAM CONFIGURATION -->
-<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-<script>
-  window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/21643048729/brut/webresponsive/accueil/accueil/top', [[1000, 90], [300, 100], [728, 90], [320, 50], [1, 1]], 'div-gpt-ad-1726151742552-0').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-</script>
-<script>
-  window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/21643048729/brut/webresponsive/default/accueil/middle', [[1, 1], [300, 250], [300, 600]], 'div-gpt-ad-1726153036380-0').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-</script>
-<script>
-  window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-  
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-</script>
-<script>
-        googletag.cmd.push(function() {
-            var dfp = {
-                networkCode: '21643048729',
-                site: 'brut',
-                support: 'webresponsive',
-                page: 'default',
-                type: 'accueil',
-                generateAdUnitRoot: function () {
-                    return '/' + this.networkCode + '/' + this.site + '/' + this.support + '/' + this.page + '/' + this.type;
-                }
-            };
-             
-            //déclaration standard emplacement par emplacement
-            googletag.defineSlot(dfp.generateAdUnitRoot()+'/top', [[1, 1]], 'dfp_arche').setTargeting('position', 'arche').addService(googletag.pubads());
- 
-            googletag.pubads().setTargeting('site', dfp.site);
-            googletag.pubads().setTargeting('support', dfp.support);
-            googletag.pubads().setTargeting('page', dfp.page);
-            googletag.pubads().setTargeting('type', dfp.type);
-             
-            if (document.referrer) {googletag.pubads().setTargeting('referrer', new URL(document.referrer).hostname.replace(/[^a-zA-Z0-9+]/g, "").replace("www", ""));}
- 
-            var dfp_pathname = window.location.pathname;
-            if (dfp_pathname !== '/') {googletag.pubads().setTargeting('url_pathname', dfp_pathname.substr(1).split('/'));}
-             
-            var preview = ['tset'];
-            if (window.location.hash !== '') {preview.push(window.location.hash.replace('#',''));}
-            if (preview) {googletag.pubads().setTargeting('preview', preview);}
-             
-            googletag.pubads().enableSingleRequest();
-            googletag.pubads().collapseEmptyDivs();
-            googletag.enableServices();
-        });
-        </script>
-<!-- GAM CONFIGURATION END-->
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -144,14 +82,13 @@
 	<div id="logo">&nbsp;</div>
 </div>
 <br>
-<div id='dfp_arche'><script>googletag.cmd.push(function() { googletag.display('dfp_arche'); });</script></div>
-</div>
-<!-- /21643048729/brut/webresponsive/accueil/accueil/top -->
-<div id='div-gpt-ad-1726151742552-0' style='min-width: 300px; min-height: 50px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1726151742552-0'); });
-  </script>
-</div>
+<!-- GAM TOP PLACEMENT -->
+<div id="sas_134603"></div>
+<script type="application/javascript">
+    sas.cmd.push(function() {
+        sas.render("134603");  // Format : TEST SKIN 0x0
+    });
+</script>
 <div id="slider">
 </div>
 <div id="columns">
@@ -260,11 +197,7 @@
     });
 </script>
 <div class="bloc5"></div>			
-<!-- /21643048729/brut/webresponsive/default/accueil/middle -->
-<div id='div-gpt-ad-1726153036380-0' style='min-width: 300px; min-height: 250px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1726153036380-0'); });
-  </script>
+<!-- GAM MIDDLE PLACEMENT -->
 </div>			
 			<div class="bloc5"></div>
 			<div class="bloc4"></div><br>
