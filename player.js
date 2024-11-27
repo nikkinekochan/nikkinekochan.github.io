@@ -21,7 +21,9 @@ tv.freewheel.DemoPlayer = function() {
 	var theSiteSectionId  = "brut_testsite";
 	var theVideoDuration = 500;
 	var theVideoAssetFallbackId = 190455434;
+	var theVideoViewRandom = 81582222222;
 	var theSiteSectionFallbackId = 9078403;
+	var thePageViewRandom = 81582222222;
 
 	// Step #2: Initialize AdManager
 	// Only one AdManager instance is needed for each player
@@ -44,8 +46,8 @@ tv.freewheel.DemoPlayer = function() {
 	// Creating ad context
 	this.currentAdContext = this.adManager.newContext();
 	this.currentAdContext.setProfile(theProfileId);
-	this.currentAdContext.setVideoAsset(theVideoAssetId, theVideoDuration,null,null,autoPlayType:VIDEO_ASSET_AUTO_PLAY_TYPE_CLICK_TO_PLAY,null,videoViewRandom,theVideoAssetFallbackId,null);
-	this.currentAdContext.setSiteSection(theSiteSectionId,null,pageViewRandom,null,theSiteSectionFallbackId);
+	this.currentAdContext.setVideoAsset(theVideoAssetId, theVideoDuration,null,null,null,null,theVideoViewRandom,theVideoAssetFallbackId,null);
+	this.currentAdContext.setSiteSection(theSiteSectionId,null,thePageViewRandom,null,theSiteSectionFallbackId);
 
 };
 
