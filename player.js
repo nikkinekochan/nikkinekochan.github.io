@@ -79,6 +79,7 @@ tv.freewheel.DemoPlayer.prototype = {
 		this.currentAdContext.addEventListener(tv.freewheel.SDK.EVENT_SLOT_ENDED, this.onSlotEnded);
 
 		this.currentAdContext.setParameter('extension.skippableAd.enabled', true, window.tv.freewheel.SDK.PARAMETER_LEVEL_GLOBAL);
+		this.currentAdContext.setParameter(tv.freewheel.SDK.VIDEO_ASSET_AUTO_PLAY_TYPE_CLICK_TO_PLAY, true, tv.freewheel.SDK.PARAMETER_LEVEL_GLOBAL);
 		this.currentAdContext.setParameter(tv.freewheel.SDK.PARAMETER_USE_GDPR_TCFAPI, true, tv.freewheel.SDK.PARAMETER_LEVEL_GLOBAL);
 
 		// Submit ad request
