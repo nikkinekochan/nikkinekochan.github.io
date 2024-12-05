@@ -24,7 +24,7 @@ tv.freewheel.DemoPlayer = function() {
 	var theVideoViewRandom = 81582222222;
 	var theSiteSectionFallbackId = 9078403;
 	var thePageViewRandom = 81582222222;
-	var theAutoPlayType = 'VIDEO_ASSET_AUTO_PLAY_TYPE_CLICK_TO_PLAY';
+	var theAutoPlayType = 'tv.freewheel.SDK.VIDEO_ASSET_AUTO_PLAY_TYPE_CLICK_TO_PLAY';
 
 	// Step #2: Initialize AdManager
 	// Only one AdManager instance is needed for each player
