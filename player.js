@@ -16,9 +16,9 @@ tv.freewheel.DemoPlayer = function() {
 	// Step #1: Obtain content metadata
 	var theNetworkId = 511351;
 	var theServerURL = "https://7cd77.v.fwmrm.net/ad/g/1";
-	var theProfileId = "511351:ftv_brut_sdk_web"
+	var theProfileId = "511351:ftv_dm_brut"
 	var theVideoAssetId = "www.brut.fr/nature/animals";
-	var theSiteSectionId  = "www.brut.fr";
+	var theSiteSectionId  = "brut_testsite";
 	var theVideoDuration = 500;
 	var theVideoAssetFallbackId = 190455434;
 	var theVideoViewRandom = 81582222222;
