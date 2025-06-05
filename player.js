@@ -49,6 +49,7 @@ tv.freewheel.DemoPlayer = function() {
 	this.currentAdContext.setProfile(theProfileId);
 	this.currentAdContext.setVideoAsset(theVideoAssetId, theVideoDuration,null,null,theAutoPlayType,theVideoViewRandom,null,theVideoAssetFallbackId,null);
 	this.currentAdContext.setSiteSection(theSiteSectionId,null,thePageViewRandom,null,theSiteSectionFallbackId);
+	this.currentAdContext.addKeyValue('_fw_h_x_country','FR');
 
 };
 
