@@ -25,6 +25,11 @@ tv.freewheel.DemoPlayer = function() {
 	var theSiteSectionFallbackId = 9078403;
 	var thePageViewRandom = 81582222222;
 	var theAutoPlayType = tv.freewheel.SDK.VIDEO_ASSET_AUTO_PLAY_TYPE_CLICK_TO_PLAY;
+	var key = "_fw_h_x_country";
+	var value = "FR";
+	
+	
+	
 
 	// Step #2: Initialize AdManager
 	// Only one AdManager instance is needed for each player
@@ -49,7 +54,7 @@ tv.freewheel.DemoPlayer = function() {
 	this.currentAdContext.setProfile(theProfileId);
 	this.currentAdContext.setVideoAsset(theVideoAssetId, theVideoDuration,null,null,theAutoPlayType,theVideoViewRandom,null,theVideoAssetFallbackId,null);
 	this.currentAdContext.setSiteSection(theSiteSectionId,null,thePageViewRandom,null,theSiteSectionFallbackId);
-	this.currentAdContext.addKeyValue(_fw_h_x_country, FR);
+	this.currentAdContext.addKeyValue(key,value);
 
 };
 
