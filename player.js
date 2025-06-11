@@ -77,7 +77,6 @@ tv.freewheel.DemoPlayer.prototype = {
 		this.currentAdContext.registerVideoDisplayBase("displayBase");
 
 		// Step #4: Add custom target key
-		this.currentAdContext.addKeyValue("skippable", "enabled");
 		this.currentAdContext.addKeyValue(key,value);
 
 		// Listen to AdManager Events
