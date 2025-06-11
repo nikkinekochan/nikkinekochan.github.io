@@ -54,8 +54,7 @@ tv.freewheel.DemoPlayer = function() {
 	this.currentAdContext.setProfile(theProfileId);
 	this.currentAdContext.setVideoAsset(theVideoAssetId, theVideoDuration,null,null,theAutoPlayType,theVideoViewRandom,null,theVideoAssetFallbackId,null);
 	this.currentAdContext.setSiteSection(theSiteSectionId,null,thePageViewRandom,null,theSiteSectionFallbackId);
-	this.currentAdContext.addKeyValue(key,value);
-
+	this.currentAdContext.addKeyValue("skippable", "enabled");
 };
 
 tv.freewheel.DemoPlayer.prototype = {
@@ -79,7 +78,7 @@ tv.freewheel.DemoPlayer.prototype = {
 		this.currentAdContext.registerVideoDisplayBase("displayBase");
 
 		// Step #4: Add custom target key
-		this.currentAdContext.addKeyValue("skippable", "enabled");
+		this.currentAdContext.addKeyValue(key,value);
 
 		// Listen to AdManager Events
 		this.currentAdContext.addEventListener(tv.freewheel.SDK.EVENT_CONTENT_VIDEO_PAUSE_REQUEST, this.onContentPauseRequest);
