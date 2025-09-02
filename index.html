@@ -1,7 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="charset" content="iso-8859-1">
+<meta charset="utf-8" />
+<meta name="viewport" content="iso-8859-1, width=device-width, initial-scale=1">
 
 <title>Si Wei Test Page</title>
 <nav id="navbar">
@@ -68,11 +69,20 @@
 <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 <script>
   window.googletag = window.googletag || {cmd: []};
+  let anchorSlot;
+  let displaySlot;
   googletag.cmd.push(function() {
-    googletag.defineSlot('/21643048729/TEST_SIWEI/webresponsive/accueil/accueil', ['fluid', [1, 1], [300, 250], [640, 480]], 'div-gpt-ad-1740041524602-0').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
+	anchorSlot = googletag.defineOutOfPageSlot(
+          "/21643048729/TEST_SIWEI/webresponsive/accueil/accueil/anchor",
+          document.body.clientWidth >= 1024
+            ? googletag.enums.OutOfPageFormat.LEFT_SIDE_RAIL //IF SCREEN IS 1024 AND ABOVE, DISPLAY SIDE RAIL
+            : googletag.enums.OutOfPageFormat.TOP_ANCHOR, //OTHERWISE, DISPLAY TOP ANCHOR
+        );
+   	displaySlot = googletag.defineSlot('/21643048729/TEST_SIWEI/webresponsive', ['fluid', [1, 1], [300, 250], [640, 480]], 'div-gpt-ad-1740041524602-0').addService(googletag.pubads());
+    		googletag.pubads().enableSingleRequest();
+    		googletag.enableServices();
+	  		googletag.display(anchorSlot!);
+  		});
 </script>
 <!-- GAM CONFIGURATION END-->
 <link rel="stylesheet" href="style.css">
@@ -132,6 +142,12 @@
 <div id='div-gpt-ad-1740065000999-0' style='min-width: 300px; min-height: 250px;'>
   <script>
     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1740065000999-0'); });
+  </script>
+</div>
+	<!-- /21643048729/TEST_SIWEI/webresponsive/accueil/accueil/anchor -->
+<div id='div-gpt-ad-1756798024891-0'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1756798024891-0'); });
   </script>
 </div>
 			<div class="bloc8"></div><br>
