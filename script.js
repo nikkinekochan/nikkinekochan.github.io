@@ -24,7 +24,7 @@ const NIELSEN_APPEND =
   '&c13=asid,P35C37763-246D-4794-AE3B-32C163614FED' +
   '&uoo=#{request.deviceOptOut}';
 
-const SUPPORT_EMAIL = "siwei.chan@francetvpub.fr";
+const TECHOPS_EMAIL = "siwei.chan@francetvpub.fr";
 
 
 // --------------------------------------------------
@@ -251,7 +251,7 @@ Erreur de conversion.`
   );
 
   window.location.href =
-    `mailto:${SUPPORT_EMAIL}?subject=${subject}&body=${body}`;
+    `mailto:${TECHOPS_EMAIL}?subject=${subject}&body=${body}`;
 }
 
 
