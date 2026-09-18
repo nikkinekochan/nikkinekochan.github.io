@@ -13,7 +13,6 @@ const PARAMETER_MAP = {
   creativename: "",
   campaignname: "",
   r: "#{timestamp}",
-  ea-rnd: "#{timestamp}"
 };
 
 const NIELSEN_PREFIX = "https://secure-gl.imrworldwide.com";
