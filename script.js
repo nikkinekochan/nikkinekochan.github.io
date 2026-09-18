@@ -13,6 +13,7 @@ const PARAMETER_MAP = {
   creativename: "",
   campaignname: "",
   r: "#{timestamp}",
+  "ea-rnd": "#{timestamp}"
 };
 
 const NIELSEN_PREFIX = "https://secure-gl.imrworldwide.com";
@@ -33,8 +34,39 @@ const TECHOPS_EMAIL = "siwei.chan@francetvpub.fr";
 // --------------------------------------------------
 
 function replaceParameter(url, parameter, value) {
-  const regex = new RegExp(`([?&;]${parameter}=)[^&;]*`);
-  return url.replace(regex, `$1${value}`);
+  const regex = new RegExp(`([?&;])(${escapeRegExp(parameter)})=([^&;]*)`, "i");
+
+  return url.replace(
+    regex,
+    `$1$2=${value}`
+  );
+}
+
+
+// --------------------------------------------------
+// Escape special characters before using a string
+// inside a regular expression
+// --------------------------------------------------
+
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+
+// --------------------------------------------------
+// Decode URL-encoded macros
+// Example:
+// ${GDPR} -> ${GDPR}
+// %24%7BGDPR%7D -> ${GDPR}
+// --------------------------------------------------
+
+function decodePixel(pixel) {
+  try {
+    return decodeURI(pixel);
+  } catch (error) {
+    // If decoding fails, keep the original pixel
+    return pixel;
+  }
 }
 
 
@@ -67,7 +99,12 @@ function findUnmappedParameters(pixel) {
       .trim();
 
     // Known parameter -> already handled by PARAMETER_MAP
-    if (Object.prototype.hasOwnProperty.call(PARAMETER_MAP, parameter)) {
+    if (
+      Object.prototype.hasOwnProperty.call(
+        PARAMETER_MAP,
+        parameter
+      )
+    ) {
       continue;
     }
 
@@ -125,14 +162,18 @@ function addNielsenParameters(url) {
 
 function convertPixel(pixel) {
 
-  let result = pixel;
+  // Decode URL-encoded macros first
+  let result = decodePixel(pixel);
+
   let replacements = 0;
+
 
   // -----------------------------------------------
   // 1. Check for unmapped macros
   // -----------------------------------------------
 
-  const unmappedParameters = findUnmappedParameters(pixel);
+  const unmappedParameters =
+    findUnmappedParameters(result);
 
   if (unmappedParameters.length > 0) {
 
@@ -150,7 +191,10 @@ function convertPixel(pixel) {
   // 2. Replace configured parameters
   // -----------------------------------------------
 
-  for (const [parameter, value] of Object.entries(PARAMETER_MAP)) {
+  for (
+    const [parameter, value]
+    of Object.entries(PARAMETER_MAP)
+  ) {
 
     const before = result;
 
@@ -221,6 +265,10 @@ function getSuccessMessage(pixel) {
     return "IAS (mesure de la visibilité, brand safety etc) conversion complete.";
   }
 
+  if (lower.includes("dynview")) {
+    return "Eulerian (tracking d'impression) conversion complete.";
+  }
+
   return "Conversion complete.";
 }
 
@@ -275,6 +323,7 @@ document.getElementById("convert").addEventListener(
     if (!input.value.trim()) {
 
       status.style.color = "#fb7185";
+
       status.textContent =
         "Paste a pixel first.";
 
@@ -283,12 +332,14 @@ document.getElementById("convert").addEventListener(
 
     try {
 
-      const originalPixel = input.value;
+      const originalPixel =
+        input.value;
 
       output.value =
         convertPixel(originalPixel);
 
-      status.style.color = "#5eead4";
+      status.style.color =
+        "#5eead4";
 
       status.textContent =
         getSuccessMessage(originalPixel);
@@ -324,14 +375,16 @@ document.getElementById("copy").addEventListener(
         output.value
       );
 
-      status.style.color = "#5eead4";
+      status.style.color =
+        "#5eead4";
 
       status.textContent =
         "Copied to clipboard.";
 
     } catch (error) {
 
-      status.style.color = "#fb7185";
+      status.style.color =
+        "#fb7185";
 
       status.textContent =
         "Copy failed.";
@@ -353,6 +406,7 @@ document.getElementById("clear").addEventListener(
 
     status.textContent = "";
 
-    status.style.color = "#5eead4";
+    status.style.color =
+      "#5eead4";
   }
 );
